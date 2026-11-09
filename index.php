@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me Process Survey</title>
-    <link rel="stylesheet" type="text/css" href="css/gird.css" />
+    <link rel="stylesheet" type="text/css" href="css/grid.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
@@ -93,10 +93,43 @@
             <input id="project_4" type="checkbox" name="favorite_projects[]" value="project_4">
             <label for="project_all">All Projects</label>
             <input id="project_all" type="checkbox" name="favorite_projects[]" value="project_all">
-
           </fieldset>
 
-        <footer>
+          <fieldset class="col-span-full">
+            <legend>What are the main reasons for reaching out to me today?</legend>
+
+            <label for="reason_fulltime">Full time employment</label>
+            <input id="reason_fulltime" type="checkbox" name="inquiry_subject[]" value="reason_fulltime">
+            <label for="reason_parttime">Part time employment</label>
+            <input id="reason_parttime" type="checkbox" name="inquiry_subject[]" value="reason_parttime">
+            <label for="reason_coffee">Coffee chat & Networking</label>
+            <input id="reason_coffee" type="checkbox" name="inquiry_subject[]" value="reason_coffee">
+            <label for="reason_feedback">General Portfolio Feedback</label>
+            <input id="reason_feedback" type="checkbox" name="inquiry_subject[]" value="reason_feedback">
+          </fieldset>
+
+          <fieldset class="col-span-full">
+            <legend>What types of work arrangements are available for this position?</legend>
+
+            <label for="remote">Fully remote</label>
+            <input id="remote" type="checkbox" name="work_arrangement[]" value="remote">
+            <label for="hybrid">Hybrid work</label>
+            <input id="hybrid" type="checkbox" name="work_arrangement[]" value="hybrid">
+            <label for="onsite">Onsite Office</label>
+            <input id="onsite" type="checkbox" name="work_arrangement[]" value="onsite">
+          </fieldset>
+
+        <h2 class="col-span-full">Additional details</h2>
+          <div class="col-span-full">
+            <label for="why_contact">What specific aspect of my portfolio made you decide to reach out? </label>
+            <textarea id="why_contact" name="why_contact"></textarea>
+          </div>
+          <div class="col-span-full">
+            <label for="job_detail">Could you share a brief overview of your team, company culture or the role you are offering? </label>
+            <textarea id="job_detail" name="job_detail"></textarea>
+          </div>
+
+        <footer class="col-span-full">
           <button type="submit">Send</button>
         </footer>
       </form>
