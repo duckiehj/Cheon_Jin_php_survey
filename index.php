@@ -79,7 +79,22 @@
           />
         </div>
 
-        <h2 class="col-span-full">About You & The Role</h2>
+        <h2 class="col-span-full">Portfolio & Role Details</h2>
+          <fieldset class="col-span-full">
+            <legend>Which specific projects from my portfolio caught your attention?</legend>
+
+            <label for="project_1">Project 1</label>
+            <input id="project_1" type="checkbox" name="favorite_projects[]" value="project_1">
+            <label for="project_2">Project 2</label>
+            <input id="project_2" type="checkbox" name="favorite_projects[]" value="project_2">
+            <label for="project_3">Project 3</label>
+            <input id="project_3" type="checkbox" name="favorite_projects[]" value="project_3">
+            <label for="project_4">Project 4</label>
+            <input id="project_4" type="checkbox" name="favorite_projects[]" value="project_4">
+            <label for="project_all">All Projects</label>
+            <input id="project_all" type="checkbox" name="favorite_projects[]" value="project_all">
+
+          </fieldset>
 
         <footer>
           <button type="submit">Send</button>
