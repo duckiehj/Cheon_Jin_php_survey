@@ -98,11 +98,11 @@
           <fieldset class="col-span-full">
             <legend>What are the main reasons for reaching out to me today?</legend>
 
-            <label for="reason_fulltime">Full time employment</label>
-            <input id="reason_fulltime" type="checkbox" name="inquiry_subject[]" value="reason_fulltime">
-            <label for="reason_parttime">Part time employment</label>
-            <input id="reason_parttime" type="checkbox" name="inquiry_subject[]" value="reason_parttime">
-            <label for="reason_coffee">Coffee chat & Networking</label>
+            <label for="reason_job">Job Offer</label>
+            <input id="reason_job" type="checkbox" name="inquiry_subject[]" value="reason_job">
+            <label for="reason_interview">Interview Invitation</label>
+            <input id="reason_interview" type="checkbox" name="inquiry_subject[]" value="reason_interview">
+            <label for="reason_coffee">Coffee Chat & Networking</label>
             <input id="reason_coffee" type="checkbox" name="inquiry_subject[]" value="reason_coffee">
             <label for="reason_feedback">General Portfolio Feedback</label>
             <input id="reason_feedback" type="checkbox" name="inquiry_subject[]" value="reason_feedback">
@@ -127,6 +127,11 @@
           <div class="col-span-full">
             <label for="job_detail">Could you share a brief overview of your team, company culture or the role you are offering? </label>
             <textarea id="job_detail" name="job_detail"></textarea>
+          </div>
+
+        <h2 class="col-span-full">Position & Preferences</h2>
+          <div cla>
+
           </div>
 
         <footer class="col-span-full">
