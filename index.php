@@ -130,8 +130,56 @@
           </div>
 
         <h2 class="col-span-full">Position & Preferences</h2>
-          <div cla>
 
+          <div class="col-span-full m-col-span-6">
+            <label for="position_type">What type of employment arrangement are you offering?</label>
+            <select id="position_type" name="position_type">
+              <option value="fulltime">Full-Time</option>
+              <option value="contract">Contract</option>
+              <option value="internship">Internship</option>
+              <option value="parttime">Part-Time</option>
+            </select>
+          </div>
+          <div class="col-span-full m-col-span-6">
+            <label for="contact">What is your preferred way to contact you?</label>
+            <select id="contact" name="contact">
+              <option value="email">Email</option>
+              <option value="phone">Phone Call</option>
+              <option value="linkedin">LinkedIn Message</option>
+            </select>
+          </div>
+          <div class="col-span-full m-col-span-6">
+            <label for="timeline">When are you looking to fill this role?</label>
+            <select id="timeline" name="timeline">
+              <option value="immediately">Immediately</option>
+              <option value="one_month">Within 1 month</option>
+              <option value="two_month">Within 2-3 months</option>
+            </select>
+          </div>
+
+          <fieldset class="col-span-full">
+            <legend>How did you first discover my portfolio website?</legend>
+            <label for="find_linkedin">LinkedIn</label>
+            <input id="find_linkedin" type="radio" name="find_method" value="find_linkedin">
+             <label for="find_google">Google Search</label>
+            <input id="find_google" type="radio" name="find_method" value="find_google">
+             <label for="find_referral">Personal Referral</label>
+            <input id="find_referral" type="radio" name="find_method" value="find_referral">
+          </fieldset>
+
+        <h2 class="col-span-full">Contact Information</h2>
+
+          <div class="col-span-full">
+            <label for="email">What is your official business email address?</label>
+            <input id="email" name="email" type="email" placeholder="info@email.com">
+          </div>
+          <div class="col-span-full">
+            <label for="job_url">What is the link to your company website?</label>
+            <input id="job_url" name="job_url" type="url" placeholder="http://website.com">
+          </div>
+          <div class="col-span-full">
+            <label for="phone_number">What is the best phone number to contact you?</label>
+            <input id="phone_number" name="phone_number" type="tel" placeholder="888 888 8888">
           </div>
 
         <footer class="col-span-full">
