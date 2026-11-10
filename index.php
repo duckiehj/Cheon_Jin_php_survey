@@ -141,7 +141,7 @@
 
         <h2 class="col-span-full">Position & Preferences</h2>
 
-          <div class="col-span-full m-col-span-6">
+          <div class="col-span-full">
             <label for="position_type">What type of employment arrangement are you offering?</label>
             <select id="position_type" name="position_type">
               <option value="fulltime">Full-Time</option>
@@ -150,7 +150,7 @@
               <option value="parttime">Part-Time</option>
             </select>
           </div>
-          <div class="col-span-full m-col-span-6">
+          <div class="col-span-full">
             <label for="contact">What is your preferred way to contact you?</label>
             <select id="contact" name="contact">
               <option value="email">Email</option>
@@ -158,7 +158,7 @@
               <option value="linkedin">LinkedIn Message</option>
             </select>
           </div>
-          <div class="col-span-full m-col-span-6">
+          <div class="col-span-full">
             <label for="timeline">When are you looking to fill this role?</label>
             <select id="timeline" name="timeline">
               <option value="immediately">Immediately</option>
