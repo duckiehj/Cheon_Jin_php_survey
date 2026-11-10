@@ -24,9 +24,17 @@ form {
   row-gap: 20px;
 }
 
+label {
+  margin-right: 12px;
+}
+
 fieldset {
   max-width: 700px;
   min-width: 0;
+}
+
+fieldset label {
+  margin-right: 12px;
 }
 
 textarea {
