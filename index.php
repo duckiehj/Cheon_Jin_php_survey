@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
     <title>About Me Process Survey</title>
     <link rel="stylesheet" type="text/css" href="css/grid.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -18,68 +24,70 @@
         method="POST"
       >
         <h2 class="col-span-full">About You & The Role</h2>
-        <div class="col-span-full m-col-span-6">
-          <label for="first_name">What is your first name?</label>
-          <input
-            id="first_name"
-            name="first_name"
-            type="text"
-            placeholder="Billy"
-          />
-        </div>
-        <div class="col-span-full m-col-span-6">
-          <label for="last_name">What is your last name?</label>
-          <input
-            id="last_name"
-            name="last_name"
-            type="text"
-            placeholder="Bob"
-          />
-        </div>
-        <div class="col-span-full m-col-span-6">
-          <label for="company_name">What is the name of your company?</label>
-          <input
-            id="company_name"
-            name="company_name"
-            type="text"
-            placeholder="VS Code Corp"
-          />
-        </div>
-        <div class="col-span-full m-col-span-6">
-          <label for="recruiter_role"
-            >What is your job title at your company?</label
-          >
-          <input
-            id="recruiter_role"
-            name="recruiter_role"
-            type="text"
-            placeholder="HR Manager"
-          />
-        </div>
-        <div class="col-span-full m-col-span-6">
-          <label for="city_location"
-            >Which city and country are you currently located in?</label
-          >
-          <input
-            id="city_location"
-            name="city_location"
-            type="text"
-            placeholder="London, Ontario"
-          />
-        </div>
-        <div class="col-span-full m-col-span-6">
-          <label for="position_title"
-            >What is the specific job title you are offering me?</label
-          >
-          <input
-            id="position_title"
-            name="position_title"
-            type="text"
-            placeholder="Designer"
-          />
-        </div>
+
+          <div class="col-span-full m-col-span-6">
+            <label for="first_name">What is your first name?</label>
+            <input
+              id="first_name"
+              name="first_name"
+              type="text"
+              placeholder="Billy"
+            />
+          </div>
+          <div class="col-span-full m-col-span-6">
+            <label for="last_name">What is your last name?</label>
+            <input
+              id="last_name"
+              name="last_name"
+              type="text"
+              placeholder="Bob"
+            />
+          </div>
+          <div class="col-span-full m-col-span-6">
+            <label for="company_name">What is the name of your company?</label>
+            <input
+              id="company_name"
+              name="company_name"
+              type="text"
+              placeholder="VS Code Corp"
+            />
+          </div>
+          <div class="col-span-full m-col-span-6">
+            <label for="recruiter_role"
+              >What is your job title at your company?</label
+            >
+            <input
+              id="recruiter_role"
+              name="recruiter_role"
+              type="text"
+              placeholder="HR Manager"
+            />
+          </div>
+          <div class="col-span-full m-col-span-6">
+            <label for="city_location"
+              >Which city and country are you currently located in?</label
+            >
+            <input
+              id="city_location"
+              name="city_location"
+              type="text"
+              placeholder="London, Ontario"
+            />
+          </div>
+          <div class="col-span-full m-col-span-6">
+            <label for="position_title"
+              >What is the specific job title you are offering me?</label
+            >
+            <input
+              id="position_title"
+              name="position_title"
+              type="text"
+              placeholder="Designer"
+            />
+          </div>
 
         <h2 class="col-span-full">Portfolio & Role Details</h2>
+
           <fieldset class="col-span-full">
             <legend>Which specific projects from my portfolio caught your attention?</legend>
 
@@ -119,7 +127,8 @@
             <input id="onsite" type="checkbox" name="work_arrangement[]" value="onsite">
           </fieldset>
 
-        <h2 class="col-span-full">Additional details</h2>
+        <h2 class="col-span-full">Additional Details</h2>
+
           <div class="col-span-full">
             <label for="why_contact">What specific aspect of my portfolio made you decide to reach out? </label>
             <textarea id="why_contact" name="why_contact"></textarea>
