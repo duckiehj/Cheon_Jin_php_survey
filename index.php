@@ -92,40 +92,43 @@
           <fieldset class="col-span-full">
             <legend>Which specific projects from my portfolio caught your attention?</legend>
 
-            <label for="project_1">Project 1</label>
             <input id="project_1" type="checkbox" name="favorite_projects[]" value="project_1">
-            <label for="project_2">Project 2</label>
+            <label for="project_1">Project 1</label>
             <input id="project_2" type="checkbox" name="favorite_projects[]" value="project_2">
-            <label for="project_3">Project 3</label>
+            <label for="project_2">Project 2</label>
             <input id="project_3" type="checkbox" name="favorite_projects[]" value="project_3">
-            <label for="project_4">Project 4</label>
+            <label for="project_3">Project 3</label>
             <input id="project_4" type="checkbox" name="favorite_projects[]" value="project_4">
-            <label for="project_all">All Projects</label>
+            <label for="project_4">Project 4</label>
             <input id="project_all" type="checkbox" name="favorite_projects[]" value="project_all">
+            <label for="project_all">All Projects</label>
+            
           </fieldset>
 
           <fieldset class="col-span-full">
             <legend>What are the main reasons for reaching out to me today?</legend>
-
-            <label for="reason_job">Job Offer</label>
+            
             <input id="reason_job" type="checkbox" name="inquiry_subject[]" value="reason_job">
-            <label for="reason_interview">Interview Invitation</label>
+            <label for="reason_job">Job Offer</label>
             <input id="reason_interview" type="checkbox" name="inquiry_subject[]" value="reason_interview">
-            <label for="reason_coffee">Coffee Chat & Networking</label>
+            <label for="reason_interview">Interview Invitation</label>
             <input id="reason_coffee" type="checkbox" name="inquiry_subject[]" value="reason_coffee">
-            <label for="reason_feedback">General Portfolio Feedback</label>
+            <label for="reason_coffee">Coffee Chat & Networking</label>
             <input id="reason_feedback" type="checkbox" name="inquiry_subject[]" value="reason_feedback">
+            <label for="reason_feedback">General Portfolio Feedback</label>
+            
           </fieldset>
 
           <fieldset class="col-span-full">
             <legend>What types of work arrangements are available for this position?</legend>
 
-            <label for="remote">Fully remote</label>
             <input id="remote" type="checkbox" name="work_arrangement[]" value="remote">
-            <label for="hybrid">Hybrid work</label>
+            <label for="remote">Fully Remote</label>
             <input id="hybrid" type="checkbox" name="work_arrangement[]" value="hybrid">
-            <label for="onsite">Onsite Office</label>
+            <label for="hybrid">Hybrid Work</label>
             <input id="onsite" type="checkbox" name="work_arrangement[]" value="onsite">
+            <label for="onsite">Onsite Office</label>
+            
           </fieldset>
 
         <h2 class="col-span-full">Additional Details</h2>
@@ -169,12 +172,13 @@
 
           <fieldset class="col-span-full">
             <legend>How did you first discover my portfolio website?</legend>
-            <label for="find_linkedin">LinkedIn</label>
             <input id="find_linkedin" type="radio" name="find_method" value="find_linkedin">
-             <label for="find_google">Google Search</label>
+            <label for="find_linkedin">LinkedIn</label>
             <input id="find_google" type="radio" name="find_method" value="find_google">
-             <label for="find_referral">Personal Referral</label>
+            <label for="find_google">Google Search</label>
             <input id="find_referral" type="radio" name="find_method" value="find_referral">
+            <label for="find_referral">Personal Referral</label>
+            
           </fieldset>
 
         <h2 class="col-span-full">Contact Information</h2>
