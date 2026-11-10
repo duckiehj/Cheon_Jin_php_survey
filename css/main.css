@@ -1,12 +1,13 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: #333;
-  padding: 30 0 60 0;
+  padding-bottom: 60px;
 }
 
 header {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -15,6 +16,30 @@ h1 {
 
 h2 {
   font-size: 25px;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+form {
+  row-gap: 20px;
+}
+
+fieldset {
+  max-width: 700px;
+  min-width: 0;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 8px;
+}
+
+button {
+  padding: 20 10 20 10;
+  border: 2;
+  border-radius: 6px;
+  background-color: aqua;
+  font-size: 20px;
 }
