@@ -1,0 +1,20 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #333;
+  padding: 30 0 60 0;
+}
+
+header {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 31px;
+}
+
+h2 {
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
