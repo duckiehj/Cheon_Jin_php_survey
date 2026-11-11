@@ -14,6 +14,9 @@ $companyName = $data["company_name"];
 $recruiterRole = $data["recruiter_role"];
 $cityLocation = $data["city_location"];
 $positionTitle = $data["position_title"];
+$whyContact = $data["why_contact"];
+$jobDetail = $data["job_detail"];
+$favoriteProjects = $data["favorite_projects"] ?? [];
 
 
 
@@ -33,6 +36,12 @@ if (isTextLengthInvalid($cityLocation, 3, 50)) { $errors["city_location"] = "Loc
 }
 
 if (isTextLengthInvalid($positionTitle, 3, 50)) { $errors["position_title"] = "Position title must be between 3 and 50 characters.";
+}
+
+if (isTextLengthInvalid($whyContact, 15, 500)) { $errors["why_contact"] = "Your reason for contacting me must be between 15 and 500 characters.";
+}
+
+if (isTextLengthInvalid($jobDetail, 15, 500)) { $errors["job_detail"] = "Your explanation about your job or company must be between 15 and 500 characters.";
 }
 
 if (array_key_exists("first_name", $errors)) {
@@ -57,4 +66,14 @@ if (array_key_exists("city_location", $errors)) {
 
 if (array_key_exists("position_title", $errors)) {
     echo $errors["position_title"];
+}
+
+if (array_key_exists("why_contact", $errors)) {
+    echo $errors["why_contact"];
+}
+
+if (array_key_exists("job_detail", $errors)) {
+    echo $errors["job_detail"];
+}
+
 }
