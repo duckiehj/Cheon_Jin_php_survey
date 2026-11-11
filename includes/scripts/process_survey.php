@@ -136,7 +136,6 @@ if (!in_array($positionType, $validPositionTypes)) {
 }
 
 
-
 $validContacts = [
     "email",
     "phone",
@@ -147,9 +146,6 @@ if (!in_array($contact, $validContacts)) {
     $errors["contact"] = "Please select a valid contact method.";
 }
 
-if (array_key_exists("contact", $errors)) {
-    echo $errors["contact"];
-}
 
 $validTimelines = [
     "immediately",
@@ -161,9 +157,7 @@ if (!in_array($timeline, $validTimelines)) {
     $errors["timeline"] = "Please select a valid hiring timeline.";
 }
 
-if (array_key_exists("timeline", $errors)) {
-    echo $errors["timeline"];
-}
+
 
 $validFindMethods = [
     "find_linkedin",
@@ -175,9 +169,6 @@ if (!in_array($findMethod, $validFindMethods)) {
     $errors["find_method"] = "Please select how you found my portfolio.";
 }
 
-if (array_key_exists("find_method", $errors)) {
-    echo $errors["find_method"];
-}
 
 
 
@@ -185,17 +176,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors["email"] = "Please enter a valid email address.";
 }
 
-if (array_key_exists("email", $errors)) {
-    echo $errors["email"];
-}
-
 
 if (!filter_var($jobUrl, FILTER_VALIDATE_URL)) {
     $errors["job_url"] = "Please enter a valid website address.";
-}
-
-if (array_key_exists("job_url", $errors)) {
-    echo $errors["job_url"];
 }
 
 
@@ -203,6 +186,3 @@ if (strlen($phoneNumber) < 7) {
     $errors["phone_number"] = "Phone number must be at least 7 characters.";
 }
 
-if (array_key_exists("phone_number", $errors)) {
-    echo $errors["phone_number"];
-}
