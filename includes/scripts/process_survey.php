@@ -20,6 +20,9 @@ $favoriteProjects = $data["favorite_projects"] ?? [];
 $inquirySubject = $data["inquiry_subject"] ?? [];
 $workArrangement = $data["work_arrangement"] ?? [];
 $positionType = $data["position_type"] ?? [];
+$contact = $data["contact"] ?? "";
+$timeline = $data["timeline"] ?? "";
+$findMethod = $data["find_method"] ?? "";
 
 
 if (isTextLengthInvalid($firstName, 3, 30)) { $errors["first_name"] = "First name must be between 3 and 30 characters.";
@@ -166,4 +169,46 @@ if (!in_array($positionType, $validPositionTypes)) {
 
 if (array_key_exists("position_type", $errors)) {
     echo $errors["position_type"];
+}
+
+$validContacts = [
+    "email",
+    "phone",
+    "linkedin"
+];
+
+if (!in_array($contact, $validContacts)) {
+    $errors["contact"] = "Please select a valid contact method.";
+}
+
+if (array_key_exists("contact", $errors)) {
+    echo $errors["contact"];
+}
+
+$validTimelines = [
+    "immediately",
+    "one_month",
+    "two_month"
+];
+
+if (!in_array($timeline, $validTimelines)) {
+    $errors["timeline"] = "Please select a valid hiring timeline.";
+}
+
+if (array_key_exists("timeline", $errors)) {
+    echo $errors["timeline"];
+}
+
+$validFindMethods = [
+    "find_linkedin",
+    "find_google",
+    "find_referral"
+];
+
+if (!in_array($findMethod, $validFindMethods)) {
+    $errors["find_method"] = "Please select how you found my portfolio.";
+}
+
+if (array_key_exists("find_method", $errors)) {
+    echo $errors["find_method"];
 }
