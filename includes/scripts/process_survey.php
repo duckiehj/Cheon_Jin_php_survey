@@ -186,3 +186,9 @@ if (strlen($phoneNumber) < 7) {
     $errors["phone_number"] = "Phone number must be at least 7 characters.";
 }
 
+
+$_SESSION["form_errors"] = $errors;
+
+header("Location: ../../index.php");
+exit;
+
