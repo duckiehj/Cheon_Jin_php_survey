@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $data = $_POST;
 $errors = [];
@@ -52,37 +53,7 @@ if (isTextLengthInvalid($whyContact, 15, 500)) { $errors["why_contact"] = "Your 
 if (isTextLengthInvalid($jobDetail, 15, 500)) { $errors["job_detail"] = "Your explanation about your job or company must be between 15 and 500 characters.";
 }
 
-if (array_key_exists("first_name", $errors)) {
-    echo $errors["first_name"];
-}
 
-if (array_key_exists("last_name", $errors)) {
-    echo $errors["last_name"];
-}
-
-if (array_key_exists("company_name", $errors)) {
-    echo $errors["company_name"];
-}
-
-if (array_key_exists("recruiter_role", $errors)) {
-    echo $errors["recruiter_role"];
-}
-
-if (array_key_exists("city_location", $errors)) {
-    echo $errors["city_location"];
-}
-
-if (array_key_exists("position_title", $errors)) {
-    echo $errors["position_title"];
-}
-
-if (array_key_exists("why_contact", $errors)) {
-    echo $errors["why_contact"];
-}
-
-if (array_key_exists("job_detail", $errors)) {
-    echo $errors["job_detail"];
-}
 
 $validProjects = [
     "project_1",
@@ -106,9 +77,9 @@ if (!is_array($favoriteProjects)) {
     }
 }
 
-if (array_key_exists("favorite_projects", $errors)) {
-    echo $errors["favorite_projects"];
-}
+// if (array_key_exists("favorite_projects", $errors)) {
+//     echo $errors["favorite_projects"];
+// }
 
 $validSubjects = [
     "reason_job",
@@ -131,10 +102,6 @@ if (!is_array($inquirySubject)) {
     }
 }
 
-if (array_key_exists("inquiry_subject", $errors)) {
-    echo $errors["inquiry_subject"];
-}
-
 $validArrangements = [
     "remote",
     "hybrid",
@@ -155,9 +122,7 @@ if (!is_array($workArrangement)) {
     }
 }
 
-if (array_key_exists("work_arrangement", $errors)) {
-    echo $errors["work_arrangement"];
-}
+
 
 $validPositionTypes = [
     "fulltime",
@@ -170,9 +135,7 @@ if (!in_array($positionType, $validPositionTypes)) {
     $errors["position_type"] = "Please select an employment type.";
 }
 
-if (array_key_exists("position_type", $errors)) {
-    echo $errors["position_type"];
-}
+
 
 $validContacts = [
     "email",
