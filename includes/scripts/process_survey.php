@@ -153,4 +153,17 @@ if (array_key_exists("work_arrangement", $errors)) {
     echo $errors["work_arrangement"];
 }
 
-$
+$validPositionTypes = [
+    "fulltime",
+    "contract",
+    "internship",
+    "parttime"
+];
+
+if (!in_array($positionType, $validPositionTypes)) {
+    $errors["position_type"] = "Please select an employment type.";
+}
+
+if (array_key_exists("position_type", $errors)) {
+    echo $errors["position_type"];
+}
