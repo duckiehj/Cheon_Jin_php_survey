@@ -185,6 +185,20 @@ if (strlen($phoneNumber) < 7) {
     $errors["phone_number"] = "Phone number must be at least 7 characters.";
 }
 
+if (count($errors) === 0) {
+    $to = "hello@email.com";
+    $subject = "New Portfolio Survey";
+    $message = "";
+
+    $message = "<h1>New Portfolio Survey</h1>";
+    $message .= "<ul>";
+    $message .= "<li>First name: " . $firstName . "</li>";
+    $message .= "<li>Last name: " . $lastName . "</li>";
+    $message .= "<li>Email: " . $email . "</li>";
+    $message .= "</ul>";
+
+    mail($to, $subject, $message);
+    }
 
 $_SESSION["form_errors"] = $errors;
 
