@@ -17,6 +17,7 @@ $positionTitle = $data["position_title"];
 $whyContact = $data["why_contact"];
 $jobDetail = $data["job_detail"];
 $favoriteProjects = $data["favorite_projects"] ?? [];
+$inquirySubject = $data["inquiry_subject"] ?? [];
 
 
 
@@ -100,4 +101,53 @@ if (!is_array($favoriteProjects)) {
 
 if (array_key_exists("favorite_projects", $errors)) {
     echo $errors["favorite_projects"];
+}
+
+$validSubjects = [
+    "reason_job",
+    "reason_interview",
+    "reason_coffee",
+    "reason_feedback"
+];
+
+if (!is_array($inquirySubject)) {
+    $errors["inquiry_subject"] = "Please check your contact reasons.";
+} else {
+    if (empty($inquirySubject)) {
+        $errors["inquiry_subject"] = "Please select at least one reason.";
+    }
+
+    foreach ($inquirySubject as $subject) {
+        if (!in_array($subject, $validSubjects)) {
+            $errors["inquiry_subject"] = "Please check your contact reasons.";
+        }
+    }
+}
+
+if (array_key_exists("inquiry_subject", $errors)) {
+    echo $errors["inquiry_subject"];
+}
+
+$validArrangements = [
+    "remote",
+    "hybrid",
+    "onsite"
+];
+
+if (!is_array($workArrangement)) {
+    $errors["work_arrangement"] = "Please check your work arrangements.";
+} else {
+    if (empty($workArrangement)) {
+        $errors["work_arrangement"] = "Please select at least one work arrangement.";
+    }
+
+    foreach ($workArrangement as $arrangement) {
+        if (!in_array($arrangement, $validArrangements)) {
+            $errors["work_arrangement"] = "Please check your work arrangements.";
+        }
+    }
+}
+
+if (array_key_exists("work_arrangement", $errors)) {
+    echo $errors["work_arrangement"];
 }
