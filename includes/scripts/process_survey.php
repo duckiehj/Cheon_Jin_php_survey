@@ -18,7 +18,8 @@ $whyContact = $data["why_contact"];
 $jobDetail = $data["job_detail"];
 $favoriteProjects = $data["favorite_projects"] ?? [];
 $inquirySubject = $data["inquiry_subject"] ?? [];
-
+$workArrangement = $data["work_arrangement"] ?? [];
+$positionType = $data["position_type"] ?? [];
 
 
 if (isTextLengthInvalid($firstName, 3, 30)) { $errors["first_name"] = "First name must be between 3 and 30 characters.";
@@ -151,3 +152,5 @@ if (!is_array($workArrangement)) {
 if (array_key_exists("work_arrangement", $errors)) {
     echo $errors["work_arrangement"];
 }
+
+$
