@@ -87,7 +87,7 @@
             />
           </div>
 
-        <h2 class="col-span-full">Portfolio & Role Details</h2>
+        <h2 class="col-span-full">Portfolio & Role Details-Select all that apply</h2>
 
           <fieldset class="col-span-full">
             <legend>Which specific projects from my portfolio caught your attention?</legend>
