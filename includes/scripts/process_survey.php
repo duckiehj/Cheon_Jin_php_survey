@@ -23,6 +23,9 @@ $positionType = $data["position_type"] ?? [];
 $contact = $data["contact"] ?? "";
 $timeline = $data["timeline"] ?? "";
 $findMethod = $data["find_method"] ?? "";
+$email = $data["email"] ?? "";
+$jobUrl = $data["job_url"] ?? "";
+$phoneNumber = $data["phone_number"] ?? "";
 
 
 if (isTextLengthInvalid($firstName, 3, 30)) { $errors["first_name"] = "First name must be between 3 and 30 characters.";
@@ -211,4 +214,32 @@ if (!in_array($findMethod, $validFindMethods)) {
 
 if (array_key_exists("find_method", $errors)) {
     echo $errors["find_method"];
+}
+
+
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors["email"] = "Please enter a valid email address.";
+}
+
+if (array_key_exists("email", $errors)) {
+    echo $errors["email"];
+}
+
+
+if (!filter_var($jobUrl, FILTER_VALIDATE_URL)) {
+    $errors["job_url"] = "Please enter a valid website address.";
+}
+
+if (array_key_exists("job_url", $errors)) {
+    echo $errors["job_url"];
+}
+
+
+if (strlen($phoneNumber) < 7) {
+    $errors["phone_number"] = "Phone number must be at least 7 characters.";
+}
+
+if (array_key_exists("phone_number", $errors)) {
+    echo $errors["phone_number"];
 }
