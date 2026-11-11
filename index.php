@@ -207,6 +207,11 @@ $_SESSION["form_errors"] = [];
         <h2 class="col-span-full">Position & Preferences</h2>
 
           <div class="col-span-full">
+            <?php
+              if (array_key_exists("position_type", $errors)) {
+                  echo '<p>' . $errors["position_type"] . '</p>';
+              }
+              ?>
             <label for="position_type">What type of employment arrangement are you offering?</label>
             <select id="position_type" name="position_type">
               <option value="fulltime">Full-Time</option>
@@ -216,6 +221,11 @@ $_SESSION["form_errors"] = [];
             </select>
           </div>
           <div class="col-span-full">
+            <?php
+              if (array_key_exists("contact", $errors)) {
+                  echo '<p>' . $errors["contact"] . '</p>';
+              }
+              ?>
             <label for="contact">What is your preferred way to contact you?</label>
             <select id="contact" name="contact">
               <option value="email">Email</option>
@@ -224,6 +234,11 @@ $_SESSION["form_errors"] = [];
             </select>
           </div>
           <div class="col-span-full">
+            <?php
+              if (array_key_exists("timeline", $errors)) {
+                  echo '<p>' . $errors["timeline"] . '</p>';
+              }
+              ?>
             <label for="timeline">When are you looking to fill this role?</label>
             <select id="timeline" name="timeline">
               <option value="immediately">Immediately</option>
@@ -233,6 +248,11 @@ $_SESSION["form_errors"] = [];
           </div>
 
           <fieldset class="col-span-full">
+            <?php
+              if (array_key_exists("find_method", $errors)) {
+                  echo '<p>' . $errors["find_method"] . '</p>';
+              }
+              ?>
             <legend>How did you first discover my portfolio website?</legend>
             <input id="find_linkedin" type="radio" name="find_method" value="find_linkedin">
             <label for="find_linkedin">LinkedIn</label>
@@ -246,14 +266,29 @@ $_SESSION["form_errors"] = [];
         <h2 class="col-span-full">Contact Information</h2>
 
           <div class="col-span-full">
-            <label for="email">What is your official business email address?</label>
+            <?php
+              if (array_key_exists("email", $errors)) {
+                  echo '<p>' . $errors["email"] . '</p>';
+              }
+              ?>
+            <label for="email">What is your official business email address?</label>    
             <input id="email" name="email" type="email" placeholder="info@email.com">
           </div>
           <div class="col-span-full">
+            <?php
+              if (array_key_exists("job_url", $errors)) {
+                  echo '<p>' . $errors["job_url"] . '</p>';
+              }
+              ?>
             <label for="job_url">What is the link to your company website?</label>
             <input id="job_url" name="job_url" type="url" placeholder="http://website.com">
           </div>
           <div class="col-span-full">
+            <?php
+              if (array_key_exists("phone_number", $errors)) {
+                  echo '<p>' . $errors["phone_number"] . '</p>';
+              }
+              ?>
             <label for="phone_number">What is the best phone number to contact you?</label>
             <input id="phone_number" name="phone_number" type="tel" placeholder="888 888 8888">
           </div>
