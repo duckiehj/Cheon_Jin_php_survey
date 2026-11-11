@@ -76,4 +76,28 @@ if (array_key_exists("job_detail", $errors)) {
     echo $errors["job_detail"];
 }
 
+$validProjects = [
+    "project_1",
+    "project_2",
+    "project_3",
+    "project_4",
+    "project_all"
+];
+
+if (!is_array($favoriteProjects)) {
+    $errors["favorite_projects"] = "Please check your project choices.";
+} else {
+    if (empty($favoriteProjects)) {
+        $errors["favorite_projects"] = "Please select at least one project.";
+    }
+
+    foreach ($favoriteProjects as $project) {
+        if (!in_array($project, $validProjects)) {
+            $errors["favorite_projects"] = "Please check your project choices.";
+        }
+    }
+}
+
+if (array_key_exists("favorite_projects", $errors)) {
+    echo $errors["favorite_projects"];
 }
