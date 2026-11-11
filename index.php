@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+$errors = $_SESSION["form_errors"] ?? [];
+$_SESSION["form_errors"] = [];
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,6 +34,11 @@
         <h2 class="col-span-full">About You & The Role</h2>
 
           <div class="col-span-full m-col-span-6">
+            <?php
+              if (array_key_exists("first_name", $errors)) {
+                  echo '<p>' . $errors["first_name"] . '</p>';
+              }
+            ?>
             <label for="first_name">What is your first name?</label>
             <input
               id="first_name"
@@ -36,6 +48,11 @@
             />
           </div>
           <div class="col-span-full m-col-span-6">
+            <?php
+              if (array_key_exists("last_name", $errors)) {
+                  echo '<p>' . $errors["last_name"] . '</p>';
+              }
+            ?>
             <label for="last_name">What is your last name?</label>
             <input
               id="last_name"
@@ -45,6 +62,11 @@
             />
           </div>
           <div class="col-span-full m-col-span-6">
+            <?php
+            if (array_key_exists("company_name", $errors)) {
+                echo '<p>' . $errors["company_name"] . '</p>';
+            }
+            ?>
             <label for="company_name">What is the name of your company?</label>
             <input
               id="company_name"
@@ -54,6 +76,11 @@
             />
           </div>
           <div class="col-span-full m-col-span-6">
+            <?php
+              if (array_key_exists("recruiter_role", $errors)) {
+                  echo '<p>' . $errors["recruiter_role"] . '</p>';
+              }
+              ?>
             <label for="recruiter_role"
               >What is your job title at your company?</label
             >
@@ -65,6 +92,11 @@
             />
           </div>
           <div class="col-span-full m-col-span-6">
+            <?php
+              if (array_key_exists("city_location", $errors)) {
+                  echo '<p>' . $errors["city_location"] . '</p>';
+              }
+              ?>
             <label for="city_location"
               >Which city and country are you currently located in?</label
             >
@@ -76,6 +108,11 @@
             />
           </div>
           <div class="col-span-full m-col-span-6">
+            <?php
+              if (array_key_exists("position_title", $errors)) {
+                  echo '<p>' . $errors["position_title"] . '</p>';
+              }
+              ?>
             <label for="position_title"
               >What is the specific job title you are offering me?</label
             >
@@ -91,6 +128,11 @@
 
           <fieldset class="col-span-full">
             <legend>Which specific projects from my portfolio caught your attention?</legend>
+            <?php
+              if (array_key_exists("favorite_projects", $errors)) {
+                  echo '<p>' . $errors["favorite_projects"] . '</p>';
+              }
+              ?>
 
             <input id="project_1" type="checkbox" name="favorite_projects[]" value="project_1">
             <label for="project_1">Project 1</label>
@@ -107,6 +149,11 @@
 
           <fieldset class="col-span-full">
             <legend>What are the main reasons for reaching out to me today?</legend>
+            <?php
+              if (array_key_exists("inquiry_subject", $errors)) {
+                  echo '<p>' . $errors["inquiry_subject"] . '</p>';
+              }
+              ?>
             
             <input id="reason_job" type="checkbox" name="inquiry_subject[]" value="reason_job">
             <label for="reason_job">Job Offer</label>
@@ -121,6 +168,11 @@
 
           <fieldset class="col-span-full">
             <legend>What types of work arrangements are available for this position?</legend>
+            <?php
+              if (array_key_exists("work_arrangement", $errors)) {
+                  echo '<p>' . $errors["work_arrangement"] . '</p>';
+              }
+              ?>
 
             <input id="remote" type="checkbox" name="work_arrangement[]" value="remote">
             <label for="remote">Fully Remote</label>
@@ -134,10 +186,20 @@
         <h2 class="col-span-full">Additional Details</h2>
 
           <div class="col-span-full">
+            <?php
+              if (array_key_exists("why_contact", $errors)) {
+                  echo '<p>' . $errors["why_contact"] . '</p>';
+              }
+              ?>
             <label for="why_contact">What specific aspect of my portfolio made you decide to reach out? </label>
             <textarea id="why_contact" name="why_contact"></textarea>
           </div>
           <div class="col-span-full">
+            <?php
+              if (array_key_exists("job_detail", $errors)) {
+                  echo '<p>' . $errors["job_detail"] . '</p>';
+              }
+              ?>
             <label for="job_detail">Could you share a brief overview of your team, company culture or the role you are offering? </label>
             <textarea id="job_detail" name="job_detail"></textarea>
           </div>
