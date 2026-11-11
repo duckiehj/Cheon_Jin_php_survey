@@ -4,10 +4,7 @@ session_start();
 $data = $_POST;
 $errors = [];
 
-function isTextLengthInvalid($text, $min, $max)
-{
-    return strlen($text) < $min || strlen($text) > $max;
-}
+
 
 $firstName = $data["first_name"];
 $lastName = $data["last_name"];
