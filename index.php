@@ -1,7 +1,11 @@
 <?php
 session_start();
 
+// Get errors saved by process_survey.php
+// Use an empty array if there are no saved errors.
+// Keep them in $errors so each question can show its own error.
 $errors = $_SESSION["form_errors"] ?? [];
+// Clear saved errors so they do not show again on refresh.
 $_SESSION["form_errors"] = [];
 ?>
 
@@ -36,6 +40,9 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full m-col-span-6">
 
             <?php
+            // Check for a first name error before showing a message.
+            // This helps the user see which answer needs fixing.
+            // Just for info, add .class to make error message in red
               if (array_key_exists("first_name", $errors)) {
                   echo '<p class="error">' . $errors["first_name"] . '</p>';
               }
@@ -51,6 +58,7 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full m-col-span-6">
             <?php
+            // Show the last name error so the user knows what to fix.
               if (array_key_exists("last_name", $errors)) {
                   echo '<p class="error">' . $errors["last_name"] . '</p>';
               }
@@ -65,6 +73,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full m-col-span-6">
             <?php
+            // Show the company name error
+            // This helps the user find and fix the answer.
             if (array_key_exists("company_name", $errors)) {
                 echo '<p class="error">' . $errors["company_name"] . '</p>';
             }
@@ -79,6 +89,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full m-col-span-6">
             <?php
+            // Show the job title error
+            // This helps the user find and fix the answer.
               if (array_key_exists("recruiter_role", $errors)) {
                   echo '<p class="error">' . $errors["recruiter_role"] . '</p>';
               }
@@ -95,6 +107,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full m-col-span-6">
             <?php
+            // Show the location error
+            // This helps the user find and fix the answer.
               if (array_key_exists("city_location", $errors)) {
                   echo '<p class="error">' . $errors["city_location"] . '</p>';
               }
@@ -111,6 +125,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full m-col-span-6">
             <?php
+            // Show the position title error
+            // This helps the user find and fix the answer.
               if (array_key_exists("position_title", $errors)) {
                   echo '<p class="error">' . $errors["position_title"] . '</p>';
               }
@@ -131,6 +147,8 @@ $_SESSION["form_errors"] = [];
           <fieldset class="col-span-full">
             <legend>Which specific projects from my portfolio caught your attention?</legend>
             <?php
+            // Show an error if no project was selected or a choice was invalid.
+            // This helps the user choose at least one project from the list.
               if (array_key_exists("favorite_projects", $errors)) {
                   echo '<p class="error">' . $errors["favorite_projects"] . '</p>';
               }
@@ -152,6 +170,8 @@ $_SESSION["form_errors"] = [];
           <fieldset class="col-span-full">
             <legend>What are the main reasons for reaching out to me today?</legend>
             <?php
+            // Show an error if no reason was selected or a choice was invalid.
+            // This helps the user choose at least one from the list
               if (array_key_exists("inquiry_subject", $errors)) {
                   echo '<p class="error">' . $errors["inquiry_subject"] . '</p>';
               }
@@ -171,6 +191,8 @@ $_SESSION["form_errors"] = [];
           <fieldset class="col-span-full">
             <legend>What types of work arrangements are available for this position?</legend>
             <?php
+            // Show an error if no work was selected or a choice was invalid.
+            // This helps the user choose at least one from the list
               if (array_key_exists("work_arrangement", $errors)) {
                   echo '<p class="error">' . $errors["work_arrangement"] . '</p>';
               }
@@ -189,6 +211,7 @@ $_SESSION["form_errors"] = [];
 
           <div class="col-span-full">
             <?php
+            c
               if (array_key_exists("why_contact", $errors)) {
                   echo '<p class="error">' . $errors["why_contact"] . '</p>';
               }
@@ -198,6 +221,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full">
             <?php
+            // Show an error when the answer is too short or too long.
+            // This helps the user change the answer to fit the length limits.
               if (array_key_exists("job_detail", $errors)) {
                   echo '<p class="error">' . $errors["job_detail"] . '</p>';
               }
@@ -210,6 +235,8 @@ $_SESSION["form_errors"] = [];
 
           <div class="col-span-full">
             <?php
+            // Show an error if the employment type is not in the list.
+            // This helps the user to choose one of the options.
               if (array_key_exists("position_type", $errors)) {
                   echo '<p class="error">' . $errors["position_type"] . '</p>';
               }
@@ -224,6 +251,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full">
             <?php
+            // Show an error if the contact method is not in the list.
+            // This helps the user to choose one of the options.
               if (array_key_exists("contact", $errors)) {
                   echo '<p class="error">' . $errors["contact"] . '</p>';
               }
