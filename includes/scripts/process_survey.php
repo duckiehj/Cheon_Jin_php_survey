@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-<? php
-echo 'Form received';
-=======
 <?php
 session_start();
 
@@ -256,4 +252,4 @@ $_SESSION["form_errors"] = $errors;
 header("Location: ../../index.php");
 exit;
 
->>>>>>> Stashed changes
+
