@@ -280,7 +280,7 @@ if (count($errors) === 0) {
     $message .= "<li>Phone: " . $phoneNumber . "</li>";
     $message .= "</ul>";
 
-    // Add the multiple-choice answers in separate groups.
+    // Add the multiple-choice answers in separate groups because it's a long list of survey
     // Foreach loop adds every selected choice to its group's list.
     $message .= "<h2>Selected Projects</h2>";
     $message .= "<ul>";
