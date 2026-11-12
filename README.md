@@ -1,6 +1,10 @@
 # Jin Cheon FIP Portfolio Project
 
-This website is the portfolio site of Hee Jin Cheon, focusing on the roles of Interactive Media Designer & Content Strategist. It connects 20 years of experience in trend forecasting and digital content creation in R&D with interactive digital media skills developed at Fanshawe College. This portfolio highlights visual communication, content planning, motion graphics, and both front-end and back-end web interactivity.
+This repo contains the submission for the PHP Survey Project by Jin Cheon. The project focuses on developing PHP Survey with questions about my portfolio.
+
+This survey has 6 short-text, 2 long-text, 3 multiple-choice, 4 single-choice, and 3 atypical questions.
+PHP checks the answers and shows errors beside each question.
+Valid answers are sent using mail(). Run with WAMP and open in localhost.
 
 ## Installation 💻
 
@@ -8,7 +12,7 @@ No installation required, simply download the zip file and extract
 
 ## Usage
 
-open index.html in your choice browser and enjoy my work
+Start WAMP/MAMP and open index.php in local host and enjoy my work
 
 ## History
 
