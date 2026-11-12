@@ -248,4 +248,3 @@ $_SESSION["form_errors"] = $errors;
 
 header("Location: ../../index.php");
 exit;
-

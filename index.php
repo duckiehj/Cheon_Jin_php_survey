@@ -36,7 +36,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full m-col-span-6">
             <?php
               if (array_key_exists("first_name", $errors)) {
-                  echo '<p>' . $errors["first_name"] . '</p>';
+                  echo '<p class="error">' . $errors["first_name"] . '</p>';
               }
             ?>
             <label for="first_name">What is your first name?</label>
@@ -50,7 +50,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full m-col-span-6">
             <?php
               if (array_key_exists("last_name", $errors)) {
-                  echo '<p>' . $errors["last_name"] . '</p>';
+                  echo '<p class="error">' . $errors["last_name"] . '</p>';
               }
             ?>
             <label for="last_name">What is your last name?</label>
@@ -64,7 +64,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full m-col-span-6">
             <?php
             if (array_key_exists("company_name", $errors)) {
-                echo '<p>' . $errors["company_name"] . '</p>';
+                echo '<p class="error">' . $errors["company_name"] . '</p>';
             }
             ?>
             <label for="company_name">What is the name of your company?</label>
@@ -78,7 +78,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full m-col-span-6">
             <?php
               if (array_key_exists("recruiter_role", $errors)) {
-                  echo '<p>' . $errors["recruiter_role"] . '</p>';
+                  echo '<p class="error">' . $errors["recruiter_role"] . '</p>';
               }
               ?>
             <label for="recruiter_role"
@@ -94,7 +94,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full m-col-span-6">
             <?php
               if (array_key_exists("city_location", $errors)) {
-                  echo '<p>' . $errors["city_location"] . '</p>';
+                  echo '<p class="error">' . $errors["city_location"] . '</p>';
               }
               ?>
             <label for="city_location"
@@ -110,7 +110,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full m-col-span-6">
             <?php
               if (array_key_exists("position_title", $errors)) {
-                  echo '<p>' . $errors["position_title"] . '</p>';
+                  echo '<p class="error">' . $errors["position_title"] . '</p>';
               }
               ?>
             <label for="position_title"
@@ -130,7 +130,7 @@ $_SESSION["form_errors"] = [];
             <legend>Which specific projects from my portfolio caught your attention?</legend>
             <?php
               if (array_key_exists("favorite_projects", $errors)) {
-                  echo '<p>' . $errors["favorite_projects"] . '</p>';
+                  echo '<p class="error">' . $errors["favorite_projects"] . '</p>';
               }
               ?>
 
@@ -151,7 +151,7 @@ $_SESSION["form_errors"] = [];
             <legend>What are the main reasons for reaching out to me today?</legend>
             <?php
               if (array_key_exists("inquiry_subject", $errors)) {
-                  echo '<p>' . $errors["inquiry_subject"] . '</p>';
+                  echo '<p class="error">' . $errors["inquiry_subject"] . '</p>';
               }
               ?>
             
@@ -170,7 +170,7 @@ $_SESSION["form_errors"] = [];
             <legend>What types of work arrangements are available for this position?</legend>
             <?php
               if (array_key_exists("work_arrangement", $errors)) {
-                  echo '<p>' . $errors["work_arrangement"] . '</p>';
+                  echo '<p class="error">' . $errors["work_arrangement"] . '</p>';
               }
               ?>
 
@@ -188,7 +188,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("why_contact", $errors)) {
-                  echo '<p>' . $errors["why_contact"] . '</p>';
+                  echo '<p class="error">' . $errors["why_contact"] . '</p>';
               }
               ?>
             <label for="why_contact">What specific aspect of my portfolio made you decide to reach out? </label>
@@ -197,7 +197,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("job_detail", $errors)) {
-                  echo '<p>' . $errors["job_detail"] . '</p>';
+                  echo '<p class="error">' . $errors["job_detail"] . '</p>';
               }
               ?>
             <label for="job_detail">Could you share a brief overview of your team, company culture or the role you are offering? </label>
@@ -209,7 +209,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("position_type", $errors)) {
-                  echo '<p>' . $errors["position_type"] . '</p>';
+                  echo '<p class="error">' . $errors["position_type"] . '</p>';
               }
               ?>
             <label for="position_type">What type of employment arrangement are you offering?</label>
@@ -223,7 +223,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("contact", $errors)) {
-                  echo '<p>' . $errors["contact"] . '</p>';
+                  echo '<p class="error">' . $errors["contact"] . '</p>';
               }
               ?>
             <label for="contact">What is your preferred way to contact you?</label>
@@ -236,7 +236,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("timeline", $errors)) {
-                  echo '<p>' . $errors["timeline"] . '</p>';
+                  echo '<p class="error">' . $errors["timeline"] . '</p>';
               }
               ?>
             <label for="timeline">When are you looking to fill this role?</label>
@@ -252,7 +252,7 @@ $_SESSION["form_errors"] = [];
             <legend>How did you first discover my portfolio website?</legend>
             <?php
               if (array_key_exists("find_method", $errors)) {
-                  echo '<p>' . $errors["find_method"] . '</p>';
+                  echo '<p class="error">' . $errors["find_method"] . '</p>';
               }
               ?>
             <input id="find_linkedin" type="radio" name="find_method" value="find_linkedin">
@@ -269,7 +269,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("email", $errors)) {
-                  echo '<p>' . $errors["email"] . '</p>';
+                  echo '<p class="error">' . $errors["email"] . '</p>';
               }
               ?>
             <label for="email">What is your official business email address?</label>    
@@ -278,7 +278,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("job_url", $errors)) {
-                  echo '<p>' . $errors["job_url"] . '</p>';
+                  echo '<p class="error">' . $errors["job_url"] . '</p>';
               }
               ?>
             <label for="job_url">What is the link to your company website?</label>
@@ -287,7 +287,7 @@ $_SESSION["form_errors"] = [];
           <div class="col-span-full">
             <?php
               if (array_key_exists("phone_number", $errors)) {
-                  echo '<p>' . $errors["phone_number"] . '</p>';
+                  echo '<p class="error">' . $errors["phone_number"] . '</p>';
               }
               ?>
             <label for="phone_number">What is the best phone number to contact you?</label>
