@@ -27,6 +27,14 @@
         <h2 class="col-span-full">About You & The Role</h2>
 
           <div class="col-span-full m-col-span-6">
+<<<<<<< Updated upstream
+=======
+            <?php
+              if (array_key_exists("first_name", $errors)) {
+                  echo '<p class="error">' . $errors["first_name"] . '</p>';
+              }
+            ?>
+>>>>>>> Stashed changes
             <label for="first_name">What is your first name?</label>
             <input
               id="first_name"
