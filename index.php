@@ -211,7 +211,8 @@ $_SESSION["form_errors"] = [];
 
           <div class="col-span-full">
             <?php
-            c
+            // Show an error when the answer is too short or too long.
+            // This helps the user change the answer to fit the length limits.
               if (array_key_exists("why_contact", $errors)) {
                   echo '<p class="error">' . $errors["why_contact"] . '</p>';
               }
@@ -266,6 +267,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full">
             <?php
+            // Show an error if the hiring timeline is not in the list.
+            // This helps the user to choose one of the options.
               if (array_key_exists("timeline", $errors)) {
                   echo '<p class="error">' . $errors["timeline"] . '</p>';
               }
@@ -282,6 +285,8 @@ $_SESSION["form_errors"] = [];
             
             <legend>How did you first discover my portfolio website?</legend>
             <?php
+            // Show an error if no option was selected or the choice was invalid.
+            // This helps the user to choose one of the options.
               if (array_key_exists("find_method", $errors)) {
                   echo '<p class="error">' . $errors["find_method"] . '</p>';
               }
@@ -299,6 +304,8 @@ $_SESSION["form_errors"] = [];
 
           <div class="col-span-full">
             <?php
+            // Show an error if email format was invalid.
+            // This helps the user fix email address before sending the form again.
               if (array_key_exists("email", $errors)) {
                   echo '<p class="error">' . $errors["email"] . '</p>';
               }
@@ -308,6 +315,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full">
             <?php
+            // Show an error if website format was invalid.
+            // This helps the user fix website address before sending the form again.
               if (array_key_exists("job_url", $errors)) {
                   echo '<p class="error">' . $errors["job_url"] . '</p>';
               }
@@ -317,6 +326,8 @@ $_SESSION["form_errors"] = [];
           </div>
           <div class="col-span-full">
             <?php
+            // Show an error if the phone number has fewer that 7 characters.
+            // This helps the user check the phone number before sending the form again.
               if (array_key_exists("phone_number", $errors)) {
                   echo '<p class="error">' . $errors["phone_number"] . '</p>';
               }
