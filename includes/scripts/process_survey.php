@@ -188,17 +188,55 @@ if (strlen($phoneNumber) < 7) {
 if (count($errors) === 0) {
     $to = "hello@email.com";
     $subject = "New Portfolio Survey";
-    $message = "";
 
     $message = "<h1>New Portfolio Survey</h1>";
     $message .= "<ul>";
     $message .= "<li>First name: " . $firstName . "</li>";
     $message .= "<li>Last name: " . $lastName . "</li>";
+    $message .= "<li>Company: " . $companyName . "</li>";
+    $message .= "<li>Recruiter role: " . $recruiterRole . "</li>";
+    $message .= "<li>Location: " . $cityLocation . "</li>";
+    $message .= "<li>Position title: " . $positionTitle . "</li>";
+    $message .= "<li>Reason for contacting me: " . $whyContact . "</li>";
+    $message .= "<li>Job details: " . $jobDetail . "</li>";
+    $message .= "<li>Employment type: " . $positionType . "</li>";
+    $message .= "<li>Contact method: " . $contact . "</li>";
+    $message .= "<li>Hiring timeline: " . $timeline . "</li>";
+    $message .= "<li>Found my portfolio through: " . $findMethod . "</li>";
     $message .= "<li>Email: " . $email . "</li>";
+    $message .= "<li>Website: " . $jobUrl . "</li>";
+    $message .= "<li>Phone: " . $phoneNumber . "</li>";
+    $message .= "</ul>";
+
+    $message .= "<h2>Selected Projects</h2>";
+    $message .= "<ul>";
+
+    foreach ($favoriteProjects as $project) {
+        $message .= "<li>" . $project . "</li>";
+    }
+
+    $message .= "</ul>";
+
+    $message .= "<h2>Contact Reasons</h2>";
+    $message .= "<ul>";
+
+    foreach ($inquirySubject as $subjectChoice) {
+        $message .= "<li>" . $subjectChoice . "</li>";
+    }
+
+    $message .= "</ul>";
+
+    $message .= "<h2>Work Arrangements</h2>";
+    $message .= "<ul>";
+
+    foreach ($workArrangement as $arrangement) {
+        $message .= "<li>" . $arrangement . "</li>";
+    }
+
     $message .= "</ul>";
 
     mail($to, $subject, $message);
-    }
+}
 
 $_SESSION["form_errors"] = $errors;
 
