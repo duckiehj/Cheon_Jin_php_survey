@@ -90,9 +90,10 @@ if (isTextLengthInvalid($whyContact, 15, 500)) { $errors["why_contact"] = "Your 
 if (isTextLengthInvalid($jobDetail, 15, 500)) { $errors["job_detail"] = "Your explanation about your job or company must be between 15 and 500 characters.";
 }
 
-// List the project values used by the form's checkboxes.
-// Compare submitted choices with this list to reject unknown values.
+// 3 multiple select questions in same form
 
+// List the project values used by the form.
+// Compare submitted choices with this list to reject unknown values.
 $validProjects = [
     "project_1",
     "project_2",
@@ -101,13 +102,21 @@ $validProjects = [
     "project_all"
 ];
 
+
+// Multiple choices should arrive as an array.
+// Show an error if the answer is not a list.
 if (!is_array($favoriteProjects)) {
     $errors["favorite_projects"] = "Please check your project choices.";
 } else {
+    // Require at least one project selection.
+    // Save an error if the user did not choose anything.
     if (empty($favoriteProjects)) {
         $errors["favorite_projects"] = "Please select at least one project.";
     }
 
+    // Check each selected project against the allowed list.
+    // Save an error if a submitted value is not one of our options.
+    // Use class file from other_cats.php
     foreach ($favoriteProjects as $project) {
         if (!in_array($project, $validProjects)) {
             $errors["favorite_projects"] = "Please check your project choices.";
@@ -115,6 +124,7 @@ if (!is_array($favoriteProjects)) {
     }
 }
 
+// left this for errors check up
 // if (array_key_exists("favorite_projects", $errors)) {
 //     echo $errors["favorite_projects"];
 // }
@@ -160,8 +170,10 @@ if (!is_array($workArrangement)) {
     }
 }
 
+// 4 multi-answer, single select questions in same form
 
-
+// List the employment types allowed by the form.
+// These values match the options in the dropdown.
 $validPositionTypes = [
     "fulltime",
     "contract",
@@ -169,6 +181,8 @@ $validPositionTypes = [
     "parttime"
 ];
 
+// Check if the submitted answer is missing from the allowed list.
+// If a submitted choice is not in this list, save an error.
 if (!in_array($positionType, $validPositionTypes)) {
     $errors["position_type"] = "Please select an employment type.";
 }
@@ -196,6 +210,9 @@ if (!in_array($timeline, $validTimelines)) {
 }
 
 
+// This radio question is one of the four single-choice questions
+// required by the assignment. Radio buttons allow only one choice.
+// Use an empty string if nothing was selected so validation can show an error.
 
 $validFindMethods = [
     "find_linkedin",
@@ -209,25 +226,41 @@ if (!in_array($findMethod, $validFindMethods)) {
 
 
 
+// 3 atypical queistions
+
+// Check its format before adding it to the email message.
+// Save an error if it is empty or is not a valid email address.
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors["email"] = "Please enter a valid email address.";
 }
 
-
+// Check that the website answer has a valid URL format.
+// Save an error if it is empty or invalid so the user can fix it.
 if (!filter_var($jobUrl, FILTER_VALIDATE_URL)) {
     $errors["job_url"] = "Please enter a valid website address.";
 }
 
-
+// Check that the phone number has at least 7 characters.
+// Save an error if it is too short. This check only measures length.
 if (strlen($phoneNumber) < 7) {
     $errors["phone_number"] = "Phone number must be at least 7 characters.";
 }
 
+
+
+// Followed in class file
+// Build and send the email only when there are no validation errors.
+// This keeps invalid answers out of the email.
+
 if (count($errors) === 0) {
+    
+    // Set the subject so the email is easy to identify.
     $to = "hello@email.com";
     $subject = "New Portfolio Survey";
 
+    // Build the email body with the validated answers.
+    // Use HTML headings and lists to group the information.
     $message = "<h1>New Portfolio Survey</h1>";
     $message .= "<ul>";
     $message .= "<li>First name: " . $firstName . "</li>";
@@ -247,6 +280,8 @@ if (count($errors) === 0) {
     $message .= "<li>Phone: " . $phoneNumber . "</li>";
     $message .= "</ul>";
 
+    // Add the multiple-choice answers in separate groups.
+    // Foreach loop adds every selected choice to its group's list.
     $message .= "<h2>Selected Projects</h2>";
     $message .= "<ul>";
 
@@ -274,11 +309,18 @@ if (count($errors) === 0) {
 
     $message .= "</ul>";
 
+
+    // Try to send the completed message.
+    // WAMP has no mail server set up.
     mail($to, $subject, $message);
 }
 
+// Save the errors in the session before returning to the form.
+// The form page reads them and shows each error message on question.
 $_SESSION["form_errors"] = $errors;
 
+// Return to the survey after processing the answers.
+// Stop here so no more code runs after the redirect.
 header("Location: ../../index.php");
 exit;
 
