@@ -242,9 +242,14 @@ if (count($errors) === 0) {
     $message .= "</ul>";
 
     mail($to, $subject, $message);
+
+    echo "Email code ran.";
+    exit;
 }
 
 $_SESSION["form_errors"] = $errors;
 
 header("Location: ../../index.php");
 exit;
+
+
