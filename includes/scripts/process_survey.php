@@ -3,6 +3,12 @@ session_start();
 
 require_once __DIR__ . '/../helpers.php';
 
+$requestType = $_SERVER["REQUEST_METHOD"];
+
+if ($requestType !== "POST") {
+    exit("Please submit the survey form.");
+}
+
 $data = $_POST;
 $errors = [];
 

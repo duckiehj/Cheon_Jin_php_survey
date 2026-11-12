@@ -248,12 +248,13 @@ $_SESSION["form_errors"] = [];
           </div>
 
           <fieldset class="col-span-full">
+            
+            <legend>How did you first discover my portfolio website?</legend>
             <?php
               if (array_key_exists("find_method", $errors)) {
                   echo '<p>' . $errors["find_method"] . '</p>';
               }
               ?>
-            <legend>How did you first discover my portfolio website?</legend>
             <input id="find_linkedin" type="radio" name="find_method" value="find_linkedin">
             <label for="find_linkedin">LinkedIn</label>
             <input id="find_google" type="radio" name="find_method" value="find_google">
