@@ -49,8 +49,13 @@ textarea {
 }
 
 button {
+<<<<<<< Updated upstream
   padding: 20px 10px;
   border: 2px;
+=======
+  padding: 20 10;
+  border: 2;
+>>>>>>> Stashed changes
   border-radius: 6px;
   background-color: aqua;
   font-size: 20px;
