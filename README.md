@@ -1,4 +1,4 @@
-# Jin Cheon FIP Portfolio Project
+# Jin Cheon HW3 PHP Survey
 
 This repo contains the submission for the PHP Survey Project by Jin Cheon. The project focuses on developing PHP Survey with questions about my portfolio.
 
